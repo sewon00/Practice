@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main(void)
+{
+	int n, i;
+	double max = 0;
+	double total = 0;
+	double arr[1000];
+
+	scanf("%d", &n);
+	
+	for(i=0; i<n; i++)
+		scanf("%lf", &arr[i]);
+
+	for(i=0; i<n; i++)
+	{
+		if(arr[i] > max)
+		{
+			max = arr[i];
+		}
+	}
+	for(i=0; i<n; i++)
+	{
+		arr[i] = arr[i] / max * 100;
+		total += arr[i];
+	}
+
+	printf("%lf", total/n);
+	return 0;
+}
+	
+
+
