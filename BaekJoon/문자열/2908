@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main(void)
+{
+	int a, b, n1, n2;
+
+	scanf("%d %d", &a, &b);
+
+	n1 = ((a%100)%10)*100 + ((a%100)/10)*10 + a/100;
+	n2 = ((b%100)%10)*100 + ((b%100)/10)*10 + b/100;
+
+	if(n1 > n2)
+		printf("%d\n", n1);
+	else
+		printf("%d\n", n2);
+}
