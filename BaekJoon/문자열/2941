@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+int main(void)
+{
+	int i, sum;
+	char word[100];
+
+	scanf("%s", word);
+	sum = strlen(word);
+
+	for(i = 0; i < strlen(word); i++)
+	{
+		if((word[i] == 'l' || word[i] == 'n') && word[i+1] == 'j')
+			sum -= 1;
+		if((word[i] == 'd' && word[i+1] == 'z') && word[i+2] == '=')
+			sum -= 1;
+		if(word[i] == '=' || word[i] == '-')
+			sum -= 1;
+	} 
+	printf("%d\n", sum); 
+}
