@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main(void)
+{
+	int i, j, k, n, num;
+	char arr[21];
+
+	scanf("%d", &n);
+
+	for(i = 0; i < n; i++)
+	{
+		scanf("%d %s", &num, arr);
+
+		for(j = 0; arr[j] != '\0'; j++)
+		{
+			for(k = 0; k < num; k++)
+				printf("%c", arr[j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
