@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main(void)
+{
+	int n, i, j, st;
+	int score[1000];
+	int total;
+	int cnt;
+	double avg;
+
+	scanf("%d", &n);
+
+	for(i =0; i<n; i++)
+	{
+		total = 0;
+		avg =0.0;
+		scanf("%d", &st);
+
+		for(j =0; j<st; j++)
+		{
+			scanf("%d", &score[j]);
+			total += score[j];
+		}
+		avg = (double)total/st;
+
+		cnt=0;
+		for(j=0; j<st; j++)
+		{
+			if(avg<score[j])
+				cnt++;
+		}
+		printf("%0.3f%%\n", (double)cnt*100/st);
+	}
+	return 0;
+}
