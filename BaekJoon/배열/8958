@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main(void)
+{	
+	int i, n, k;
+	char arr[81];
+	int score=0;
+	int cnt=0;
+	int j =0;
+
+	scanf("%d", &n);
+	
+	for(i=0; i < n; i++)
+	{	
+		scanf("%s", arr);
+
+		while(arr[j] != '\0')
+			j++;
+
+		for(k = 0; k < j; k++)
+		{
+			if(arr[k] == 'O')
+			{
+				cnt++;
+				score += cnt;
+			}
+			else
+				cnt =0;
+		}
+		printf("%d\n", score);
+		score = 0;
+		cnt = 0;
+		j = 0;
+	}
+	return 0;
+
+}
