@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main(void)
+{
+	int arr[9];
+	int i;
+	int max = 0;
+	
+	for(i = 0; i < 9; i++)
+	{
+		scanf("%d", &arr[i]);
+		if(arr[i] > max)
+			max= arr[i];
+
+	}
+	printf("%d\n", max);
+
+	for(i = 0; i <9; i++)
+	{
+		if(max == arr[i])
+			printf("%d\n", i+1);
+	}
+	return 0;
+}
