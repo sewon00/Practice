@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main(void)
+{
+	int a, n, count=0, sum =0;
+
+	scanf("%d", &n);
+	a = n;
+	
+	while(1){
+		sum = (a/10) + (a%10);
+		a = (a%10) *10 + (sum %10);
+
+		count++;
+
+		if(a == n)
+			break;
+	}
+	printf("%d", count);
+	
+	return 0;
+}
+
+
+	
