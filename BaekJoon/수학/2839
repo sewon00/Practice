@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main(void)
+{
+	int n, i;
+	int sum = 0;
+
+	scanf("%d", &n);
+
+	while(1)
+	{
+		if(n % 5 == 0)
+		{
+			sum += (n/5);
+			printf("%d\n", sum);
+			break;
+		}
+		
+		n = n-3;
+		sum++;
+
+		if(n < 0)
+		{
+			printf("-1");
+			break;
+		}
+	}
+}
