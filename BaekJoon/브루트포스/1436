@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main(void)
+{
+	int n, i, cnt, ncnt, count = 0, num;
+
+	scanf("%d", &n);
+
+	for(i = 666; ; i++){
+		ncnt = 0;
+		num = i;
+
+		while(num > 0)
+		{
+			if(num % 1000 == 666)
+			{
+				ncnt++;
+				break;
+			}
+			num /= 10;
+		}
+		if(ncnt == 1)
+			count++;
+		if(count == n)
+			break;
+	}
+	printf("%d", i);
+	return 0;
+}
