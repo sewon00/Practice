@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int n, i, a; 
+	
+    int ac = 0;
+    int answer = 0;
+
+	scanf("%d",&n);
+
+    for(i = 10; i <= n; i++)
+	{
+        answer = 0;
+        a = i;
+        answer += a;
+        while(a > 0)
+		{
+            answer += a%10;
+            a /= 10;
+        }
+        if(answer == n)
+		{ 
+            printf("%d\n",i); 
+			ac++;
+            return 0;
+        }
+    }
+    if(ac == 0) 
+		printf("0");
+    return 0;
+}
